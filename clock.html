@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+    }
+.clock-body{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background:linear-gradient( rgb(20, 50,200), rgb(126, 3, 249));
+    border: 5px solid black;
+    position: relative;
+}
+p{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+.num1{
+   position: absolute;
+   transform: translate(150px, 5px); 
+}
+.num2{
+   position: absolute;
+   transform: translate(175px, 35px); 
+}
+.num3{
+   position: absolute;
+   transform: translate(180px, 75px); 
+}
+.num4{
+   position: absolute;
+   transform: translate(170px, 115px); 
+}
+.num5{
+   position: absolute;
+   transform: translate(140px, 145px); 
+}
+.num6{
+   position: absolute;
+   transform: translate(100px, 160px); 
+}
+.num7{
+   position: absolute;
+   transform: translate(55px, 150px); 
+}
+.num8{
+   position: absolute;
+   transform: translate(20px, 120px); 
+}
+.num9{
+   position: absolute;
+   transform: translate(10px, 75px); 
+}
+.num10{
+   position: absolute;
+   transform: translate(15px, 35px); 
+}
+.num11{
+   position: absolute;
+   transform: translate(45px, 0px); 
+}
+.num12{
+   position: absolute;
+   transform: translate(90px, -10px); 
+}
+.center{
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    top: 33%;
+    z-index: 30;
+}
+.hour-hand {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 50px;
+  background-color: #333;
+  transform-origin: bottom center;
+}
+
+.minute-hand {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 70px;
+  background-color: #666;
+  transform-origin: bottom center;
+}
+
+.second-hand {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 85px;
+  background-color: #f00;
+  transform-origin: bottom center;
+}
+</style>
+<body>
+    <div class="center"></div>
+    <div class="clock-body">   
+        <p class="num1">1</p>
+        <p class="num2">2</p>
+        <p class="num3">3</p>
+        <p class="num4">4</p>
+        <p class="num5">5</p>
+        <p class="num6">6</p>
+        <p class="num7">7</p>
+        <p class="num8">8</p>
+        <p class="num9">9</p>
+        <p class="num10">10</p>
+        <p class="num11">11</p>
+        <p class="num12">12</p>
+    </div>
+    <div class="hour-hand"></div>
+    <div class="minute-hand"></div>
+    <div class="second-hand"></div>
+</body>
+<script>
+const hourHand = document.querySelector('.hour-hand');
+const minuteHand = document.querySelector('.minute-hand');
+const secondHand = document.querySelector('.second-hand');
+hourHand.style.transform = 'rotate(0deg)';
+minuteHand.style.transform = 'rotate(0deg)';
+secondHand.style.transform = 'rotate(0deg)';
+setInterval(() => {
+  const now = new Date();
+  const hours = now.getHours() % 12;
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const hourAngle = (hours * 30) + (minutes * 0.5);
+  const minuteAngle = (minutes * 6);
+  const secondAngle = (seconds * 6);
+
+  hourHand.style.transform = `rotate(${hourAngle}deg)`;
+  minuteHand.style.transform = `rotate(${minuteAngle}deg)`;
+  secondHand.style.transform = `rotate(${secondAngle}deg)`;
+}, 1000);
+</script>
+</html>
