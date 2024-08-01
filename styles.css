@@ -1,0 +1,175 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url(pngtree-hd-texture-background-with-vintage-golden-wall-clock-image_13865592.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgb(247, 211, 143, .01);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+#clock {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+input[type="time"] {
+    font-size: 1em;
+    padding: 5px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+#alarmList {
+    list-style: none;
+    padding: 0;
+}
+
+#alarmList li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+#alarmList button {
+    margin: 0;
+}
+.clock-body{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: rgb(247, 211, 143, .01);
+    border: 5px solid black;
+    position: relative;
+    margin-right: 110px;
+    padding-right: 4px;
+}
+.input{
+  border-radius: 5px;
+  border: none;
+}
+p{
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    font-family: "Quattrocento", sans-serif;
+}
+.num1{
+   position: absolute;
+   transform: translate(150px, 5px); 
+}
+.num2{
+   position: absolute;
+   transform: translate(175px, 35px); 
+}
+.num3{
+   position: absolute;
+   transform: translate(180px, 75px); 
+}
+.num4{
+   position: absolute;
+   transform: translate(170px, 115px); 
+}
+.num5{
+   position: absolute;
+   transform: translate(140px, 145px); 
+}
+.num6{
+   position: absolute;
+   transform: translate(100px, 160px); 
+}
+.num7{
+   position: absolute;
+   transform: translate(55px, 150px); 
+}
+.num8{
+   position: absolute;
+   transform: translate(20px, 120px); 
+}
+.num9{
+   position: absolute;
+   transform: translate(10px, 75px); 
+}
+.num10{
+   position: absolute;
+   transform: translate(15px, 35px); 
+}
+.num11{
+   position: absolute;
+   transform: translate(45px, 0px); 
+}
+.num12{
+   position: absolute;
+   transform: translate(90px, -10px); 
+}
+.center{
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+    background-color: black;
+    position: absolute;
+    top: 48%;
+    left: 31.5%;
+    z-index: 30;
+}
+.hour-hand {
+  position: absolute;
+  top: 42%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 50px;
+  background-color: #333;
+  transform-origin: bottom center;
+}
+
+.minute-hand {
+  position: absolute;
+  top: 38.5%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 70px;
+  background-color: #666;
+  transform-origin: bottom center;
+}
+
+.second-hand {
+  position: absolute;
+  top: 36%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 85px;
+  background-color: #f00;
+  transform-origin: bottom center;
+}
